@@ -6,6 +6,8 @@ package com.stackroute.pe2;
 
 public class EvenNumTester {
     public static String isEven(int inputNum){
+        if(inputNum<0)
+            return null;
         //Checking for Even and Odd
 
         if(inputNum%2==0)

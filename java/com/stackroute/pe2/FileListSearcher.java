@@ -10,6 +10,8 @@ import java.io.IOException;
 
 public class FileListSearcher {
     public String fileSearch(String path,String extension) throws IOException { //Searching the file lists using the file path
+        if(path==null)
+            return null;
         String listFiles="";
         String outp="";
         File directory = new File(path);

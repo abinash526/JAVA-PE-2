@@ -10,6 +10,8 @@ import java.io.IOException;
 
 public class FileValueReader {
     public String readFile(String filePath) throws IOException {//Reading the file using FileReader
+        if(filePath==null)
+            return null;
       java.io.FileReader fr=new java.io.FileReader(filePath);
         int i;
         String out="";

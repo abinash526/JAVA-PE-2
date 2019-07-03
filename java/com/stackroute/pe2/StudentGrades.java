@@ -20,6 +20,8 @@ import java.util.Collections;
 public class StudentGrades {
     public String studentGrades(int numberOfGrades,int[] numArr)//Calling and printing Maximum Minimum and Average
     {
+        if(numberOfGrades<=0||numberOfGrades>100)
+            return null;
 
         int p=0;
         String string=Arrays.toString(numArr);

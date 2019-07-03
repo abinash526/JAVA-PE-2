@@ -15,6 +15,8 @@ import java.util.*;
 
 public class WordFrequencyFile {
     public String wordFrequencyFile(String path) throws IOException {//Reading from file path
+        if(path==null)
+            return null;
         FileReader fileReader=new FileReader(path);
         int i;
         String outputString="";

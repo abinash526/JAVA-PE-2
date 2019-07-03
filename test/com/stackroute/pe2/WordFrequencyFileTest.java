@@ -30,4 +30,10 @@ public class WordFrequencyFileTest {
                 " sleep:-1 a:-2 home.:-1 like:-1 have:-1 i:-3 man:-1 to:-1 am:-1",res);
 
     }
+    @Test
+    public void countWordFrequencyFileNull() throws IOException {
+        String res=ob.wordFrequencyFile(null);
+        assertNull(res);
+
+    }
 }

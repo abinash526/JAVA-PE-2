@@ -28,6 +28,15 @@ public class StudentGradesTest {
 
 
     }
+    @Test
+    public void calcAvgMinMaxNull() {
+        int[] markArr={23,54,45,76,98};
+
+        String res=ob.studentGrades(105,markArr);
+        assertNull(res);
+
+
+    }
   /*  @Test
     public void calcForNull() {
 

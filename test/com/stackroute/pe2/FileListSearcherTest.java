@@ -67,4 +67,9 @@ public class FileListSearcherTest {
                 "file.txt\n" +
                 "src\n",res);
     }
+    @Test
+    public void fileSearchforimlFilesNull() throws IOException {
+        String res=ob.fileSearch(null,null);
+        assertNull(res);
+    }
 }

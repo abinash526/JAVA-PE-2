@@ -29,4 +29,12 @@ public class FileValueReaderTest {
 
 
     }
+    @Test
+    public void readFileFromDirectoryNull() throws IOException {
+        String result=ob.readFile(null);
+
+        assertNull(result);
+
+
+    }
 }

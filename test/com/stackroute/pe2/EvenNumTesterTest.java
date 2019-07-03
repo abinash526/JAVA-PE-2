@@ -26,4 +26,10 @@ public class EvenNumTesterTest {
         assertEquals("false",result);
 
     }
+    @Test
+    public void toTestANumIsNotEvenReturnsNull() {
+        String result= EvenNumTester.isEven(-30);
+        assertNull(result);
+
+    }
 }
