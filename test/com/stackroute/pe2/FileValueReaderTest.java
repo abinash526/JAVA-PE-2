@@ -8,12 +8,12 @@ import java.io.IOException;
 
 import static org.junit.Assert.*;
 
-public class ReadFileTest {
-    ReadFile ob;
+public class FileValueReaderTest {
+    FileValueReader ob;
 
     @Before
     public void setUp() throws Exception {
-        ob=new ReadFile();
+        ob=new FileValueReader();
     }
 
     @After

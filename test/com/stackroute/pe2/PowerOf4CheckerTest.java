@@ -6,12 +6,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class PowerOf4CheckTest {
-    PowerOf4Check ob;
+public class PowerOf4CheckerTest {
+    PowerOf4Checker ob;
 
     @Before
     public void setUp() throws Exception {
-    ob=new PowerOf4Check();
+    ob=new PowerOf4Checker();
     }
 
     @After

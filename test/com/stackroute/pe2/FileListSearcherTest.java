@@ -4,17 +4,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 
 import static org.junit.Assert.*;
 
-public class FileSearchTest {
-    FileSearch ob;
+public class FileListSearcherTest {
+    FileListSearcher ob;
 
     @Before
     public void setUp() throws Exception {
-    ob=new FileSearch();
+    ob=new FileListSearcher();
     }
 
 

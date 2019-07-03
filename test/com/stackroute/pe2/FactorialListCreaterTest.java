@@ -6,12 +6,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class FactorialListTest {
+public class FactorialListCreaterTest {
 
-    FactorialList ob;
+    FactorialListCreater ob;
     @Before
     public void setUp() throws Exception {
-        ob=new FactorialList();
+        ob=new FactorialListCreater();
     }
 
     @After

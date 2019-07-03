@@ -6,12 +6,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class PallindromeCheckTest {
-    PallindromeCheck ob;
+public class PallindromeCheckerTest {
+    PallindromeChecker ob;
 
     @Before
     public void setUp() throws Exception {
-        ob=new PallindromeCheck();
+        ob=new PallindromeChecker();
     }
 
     @After
@@ -25,6 +25,18 @@ public class PallindromeCheckTest {
         assertEquals("pallindrome",result);
         String result2=ob.pallindromeCheck("werty");
         assertEquals("not a pallindrome",result2);
+
+    }
+    @Test
+    public void pallindromeCheckForNull() {
+        String result=ob.pallindromeCheck(null);
+        assertNull(result);
+
+    }
+    @Test
+    public void pallindromeCheckForNotNull() {
+        String result=ob.pallindromeCheck("wertrew");
+        assertNotNull(result);
 
     }
 }

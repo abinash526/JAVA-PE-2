@@ -1,22 +1,29 @@
+/*
+* Write a program to calculate the frequency of the words in a given file,Example: Create a file named FileDemo.txt with the following content
+i am a man ,
+i like to sleep ,
+i have a home.
+Output: i->3 times,
+am-1,
+like -1,
+have -1,
+a-2 etc.,*/
 package com.stackroute.pe2;
-
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
 public class WordFrequencyFile {
-    public String wordFrequencyFile(String path) throws IOException {
-        FileReader fr=new FileReader(path);
+    public String wordFrequencyFile(String path) throws IOException {//Reading from file path
+        FileReader fileReader=new FileReader(path);
         int i;
-        String out="";
+        String outputString="";
 
-        while((i=fr.read())!=-1)
-            out=out+((char)i);
-        fr.close();
-        String[] arrOut=out.split(" |,");
-        //System.out.println(arrOut.length);
-        //int[] countFreq=new int[arrOut.length];
+        while((i=fileReader.read())!=-1)
+            outputString=outputString+((char)i);
+        fileReader.close();//Reading using FileReader
+        String[] arrOut=outputString.split(" |,");
+
         HashMap<String,Integer> h = new HashMap();
         for(i=0;i<arrOut.length;i++)
         {
@@ -30,7 +37,7 @@ public class WordFrequencyFile {
                 int temp=h.get(arrOut[i]);
                 h.put(arrOut[i],temp+1);
             }
-            //h.put(arrOut[i],1);
+
 
         }
         Set set = h.entrySet();
@@ -38,23 +45,14 @@ public class WordFrequencyFile {
         while (iterator.hasNext())
         {
             Map.Entry mentry = (Map.Entry)iterator.next();
-            out=out+ (" "+ mentry.getKey() + ":-");
-            out=out+(mentry.getValue());
+            outputString=outputString+ (" "+ mentry.getKey() + ":-");
+            outputString=outputString+(mentry.getValue());
         }
 
 
-       /* for(i=0;i<arrOut.length;i++)
-        {
-           for(int j=0;j<arrOut.length;j++)
-           {
-               if(arrOut[i].equals(arrOut[j]))
-               {
-                   countFreq[i]++;
-               }
-           }
-        }*/
 
-        return out;
+
+        return outputString;
     }
 
 }
